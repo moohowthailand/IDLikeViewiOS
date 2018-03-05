@@ -1,0 +1,22 @@
+{
+  "name": "IDLikeViewiOS",
+  "version": "0.1.0",
+  "summary": "A short description of IDLikeViewiOS.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/Soemsak Loetphornphisit/IDLikeViewiOS",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Soemsak Loetphornphisit": "soemsakplus@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/Soemsak Loetphornphisit/IDLikeViewiOS.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "IDLikeViewiOS/Classes/**/*"
+}

@@ -1,0 +1,6 @@
+framework module Pods_IDLikeViewiOS_Example {
+  umbrella header "Pods-IDLikeViewiOS_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}
