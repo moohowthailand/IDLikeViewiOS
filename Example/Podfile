@@ -1,7 +1,7 @@
 use_frameworks!
 
 target 'IDLikeViewiOS_Example' do
-  pod 'IDLikeViewiOS', :path => '../'
+    #pod 'IDLikeViewiOS', :path => '../'
 
   target 'IDLikeViewiOS_Tests' do
     inherit! :search_paths

@@ -14,6 +14,11 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		665EE69B2044189600918FCE /* heartsound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 665EE69A2044189600918FCE /* heartsound.mp3 */; };
+		66C133F920440F8A00A462E3 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66C133F820440F8A00A462E3 /* GameKit.framework */; };
+		66C133FB2044101300A462E3 /* AnimationScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C133FA2044101300A462E3 /* AnimationScene.swift */; };
+		66C133FD2044170F00A462E3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66C133FC2044170F00A462E3 /* Images.xcassets */; };
+		66D75989203E80DF00A77B98 /* IDLikeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D75988203E80DF00A77B98 /* IDLikeView.swift */; };
 		B374F04D6D765C31A45EF452 /* Pods_IDLikeViewiOS_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDE7DC232662C2F621FEADB9 /* Pods_IDLikeViewiOS_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,9 +33,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		09A6369EBC1D764A46671F4E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		09A6369EBC1D764A46671F4E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		0B7B96DE53C93DB018CBB94B /* Pods_IDLikeViewiOS_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IDLikeViewiOS_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		15FBFBDC5F4342098F4C0F27 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		15FBFBDC5F4342098F4C0F27 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* IDLikeViewiOS_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IDLikeViewiOS_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -41,7 +46,12 @@
 		607FACE51AFB9204008FA782 /* IDLikeViewiOS_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IDLikeViewiOS_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		7111DDE0C2CE6C3592496A56 /* IDLikeViewiOS.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = IDLikeViewiOS.podspec; path = ../IDLikeViewiOS.podspec; sourceTree = "<group>"; };
+		665EE69A2044189600918FCE /* heartsound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = heartsound.mp3; sourceTree = "<group>"; };
+		66C133F820440F8A00A462E3 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		66C133FA2044101300A462E3 /* AnimationScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationScene.swift; sourceTree = "<group>"; };
+		66C133FC2044170F00A462E3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		66D75988203E80DF00A77B98 /* IDLikeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDLikeView.swift; sourceTree = "<group>"; };
+		7111DDE0C2CE6C3592496A56 /* IDLikeViewiOS.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = IDLikeViewiOS.podspec; path = ../IDLikeViewiOS.podspec; sourceTree = "<group>"; };
 		764F89579D12D2E4A5F82FA8 /* Pods-IDLikeViewiOS_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IDLikeViewiOS_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IDLikeViewiOS_Example/Pods-IDLikeViewiOS_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		7EA635DAB2DE1E39FF947566 /* Pods-IDLikeViewiOS_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IDLikeViewiOS_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IDLikeViewiOS_Tests/Pods-IDLikeViewiOS_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		A58C17950541DC9FA7770DC5 /* Pods-IDLikeViewiOS_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IDLikeViewiOS_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-IDLikeViewiOS_Tests/Pods-IDLikeViewiOS_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -54,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66C133F920440F8A00A462E3 /* GameKit.framework in Frameworks */,
 				53B6CC125B67728B6982CB3A /* Pods_IDLikeViewiOS_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -93,12 +104,15 @@
 		607FACD21AFB9204008FA782 /* Example for IDLikeViewiOS */ = {
 			isa = PBXGroup;
 			children = (
+				665EE6992044187E00918FCE /* Sound */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				66D75988203E80DF00A77B98 /* IDLikeView.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
-				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
+				66C133FA2044101300A462E3 /* AnimationScene.swift */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
+				66C133FC2044170F00A462E3 /* Images.xcassets */,
 			);
 			name = "Example for IDLikeViewiOS";
 			path = IDLikeViewiOS;
@@ -115,6 +129,7 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACEB1AFB9204008FA782 /* Tests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
@@ -139,9 +154,18 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
+		665EE6992044187E00918FCE /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				665EE69A2044189600918FCE /* heartsound.mp3 */,
+			);
+			name = Sound;
+			sourceTree = "<group>";
+		};
 		6E4FDCC53F05A7E3956F23D9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				66C133F820440F8A00A462E3 /* GameKit.framework */,
 				0B7B96DE53C93DB018CBB94B /* Pods_IDLikeViewiOS_Example.framework */,
 				DDE7DC232662C2F621FEADB9 /* Pods_IDLikeViewiOS_Tests.framework */,
 			);
@@ -215,10 +239,12 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = K29ACE56SR;
 						LastSwiftMigration = 0900;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = K29ACE56SR;
 						LastSwiftMigration = 0900;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -248,7 +274,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				665EE69B2044189600918FCE /* heartsound.mp3 in Resources */,
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
+				66C133FD2044170F00A462E3 /* Images.xcassets in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
@@ -379,8 +407,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66D75989203E80DF00A77B98 /* IDLikeView.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				66C133FB2044101300A462E3 /* AnimationScene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -526,6 +556,7 @@
 			baseConfigurationReference = 764F89579D12D2E4A5F82FA8 /* Pods-IDLikeViewiOS_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = K29ACE56SR;
 				INFOPLIST_FILE = IDLikeViewiOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -541,6 +572,7 @@
 			baseConfigurationReference = FE7C0B235E547A290E3BD780 /* Pods-IDLikeViewiOS_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = K29ACE56SR;
 				INFOPLIST_FILE = IDLikeViewiOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -555,6 +587,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7EA635DAB2DE1E39FF947566 /* Pods-IDLikeViewiOS_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = K29ACE56SR;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -576,6 +609,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A58C17950541DC9FA7770DC5 /* Pods-IDLikeViewiOS_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = K29ACE56SR;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
