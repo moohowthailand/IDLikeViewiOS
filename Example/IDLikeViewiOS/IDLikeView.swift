@@ -12,6 +12,8 @@ import AVFoundation
 
 class IDLikeView: UIView {
     
+//    var touchViews = [UITouch:TouchSpotView]()
+    
     var player: AVAudioPlayer?
     var scene: AnimationScene!
     var size: CGSize!
@@ -69,21 +71,22 @@ class IDLikeView: UIView {
     // MARK: init
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        setupView(numberOfPage: 1)
+        setupView(numberOfPage: 3)
     }
     
     override public init(frame: CGRect) {
         super.init(frame: frame)
-        setupView(numberOfPage: 1)
+        setupView(numberOfPage: 3)
     }
     
     override public func draw(_ rect: CGRect) {
         super.draw(rect)
-        print("draw\(self.bounds.size.width * CGFloat(2))")
-        scrollView.contentSize = CGSize(width: (self.bounds.size.width * CGFloat(1)), height: bounds.height)
+        scrollView.contentSize = CGSize(width: (self.bounds.size.width * CGFloat(3)), height: bounds.height)
     }
     
     func setupView(numberOfPage: Int) {
+        
+        
         for imageName in 1...stillImageCount {
             let heartName = "HeartClick" + "\(String(format: "%d", imageName))"
             let heartImage:UIImage = UIImage(named: heartName)!
@@ -105,6 +108,7 @@ class IDLikeView: UIView {
         }
         
         subView.frame = self.bounds
+        
         scrollView.bounces = false
         scrollView.frame = self.bounds
         self.addSubview(scrollView)
@@ -120,16 +124,17 @@ class IDLikeView: UIView {
         let singleTap = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(_:)))
         self.addGestureRecognizer(singleTap)
         
-//        let doubleTap = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(_:)))
-//        doubleTap.numberOfTapsRequired = 2
-//        self.addGestureRecognizer(doubleTap)
-        
-        
         let longPress = UILongPressGestureRecognizer(target: self, action: #selector(imageHold(tapGestureRecognizer:)))
         self.addGestureRecognizer(longPress)
         
+        subView.isUserInteractionEnabled = true
+        subView.isMultipleTouchEnabled = true
+        subView2.isUserInteractionEnabled = true
+        subView2.isMultipleTouchEnabled = true
+        scrollView.isUserInteractionEnabled = true
+        scrollView.isMultipleTouchEnabled = true
+        self.isMultipleTouchEnabled = true
         self.isUserInteractionEnabled = true
-        
     }
     
     @objc func imageHold(tapGestureRecognizer: UIPinchGestureRecognizer) {
@@ -142,16 +147,7 @@ class IDLikeView: UIView {
             self.player?.currentTime = 0
             self.player?.play()
             
-//            let timeMusic = Double(currentLike * 50)/1000 - 0.3
-//            player.currentTime = timeMusic
-//            timeClicked = Date()
-//            self.imageView = HeartAnimate().animateHoldStart(likeValue: 0, imageView: imageView)
-//            HeartAnimate().playSound(player: self.player!, currentLike: 0)
         case .ended:
-//            timeReleased = Date()
-//            self.imageView = HeartAnimate().animateHoldStop(currentLike: 0,imageView: imageView ,timeClicked: timeClicked! , timeReleased: timeReleased!)
-//            HeartAnimate().stopSound(player: player!)
-//            print(imageView.tag)
             self.player?.stop()
             UIView.animate(withDuration: 1.0, animations: {
                 self.longImageView.alpha = 0.0
@@ -170,60 +166,48 @@ class IDLikeView: UIView {
         }
     }
     
-    @objc func handleTap(_ gestureRecognizer: UITapGestureRecognizer) {
-        print("Hello World")
-        if gestureRecognizer.state == UIGestureRecognizerState.recognized {
-            print(gestureRecognizer.location(in: gestureRecognizer.view))
-            
-            
-//            self.player?.currentTime = 0
-//            self.player?.
-//            self.player?.play()
-            
-            /*size = self.frame.size
-            scene = AnimationScene(size: size)
-            
-            var sceneView = SKView(frame: self.frame)
-            sceneView.backgroundColor = .white
-            
-            self.addSubview(sceneView)
-            sceneView.presentScene(scene)*/
-            
-            let clickView = UIView(frame: CGRect(x: gestureRecognizer.location(in: gestureRecognizer.view).x,y:  gestureRecognizer.location(in: gestureRecognizer.view).y, width: 60, height: 60))
-            let imageView = UIImageView(frame: CGRect(x: -30,y: -60, width: 60, height: 60))
-            clickView.addSubview(initAnimate(imageView: imageView))
-            self.addSubview(clickView)
-            imageView.startAnimating()
-            UIView.animate(withDuration: 2.0, animations: {
+    func showSmallHeart(rect:CGRect) {
+        let clickView = UIView(frame: rect)
+        let imageView = UIImageView(frame: CGRect(x: -30,y: -70, width: 60, height: 60))
+//        imageView.backgroundColor = UIColor.gray
+        clickView.addSubview(initAnimate(imageView: imageView))
+        self.addSubview(clickView)
+//        UIView.animate(withDuration: 2.0, animations: {
+//            clickView.alpha = 0.0
+//            var xOffset: CGFloat = CGFloat(arc4random_uniform(40))
+//            if(arc4random_uniform(2)%2 == 0){
+//                xOffset = xOffset * -1
+//            }
+//            let yOffset: CGFloat = (CGFloat(arc4random_uniform(40)) * -1) - 40
+//            let newLocation = CGPoint(x: clickView.frame.origin.x + xOffset, y: clickView.frame.origin.y + yOffset)
+//            clickView.frame.origin = newLocation
+//        }, completion: { (complete) in
+//            imageView.removeFromSuperview()
+//            clickView.removeFromSuperview()
+//        })
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) { // change 2 to desired number of seconds
+            UIView.animate(withDuration: 0.5, animations: {
                 clickView.alpha = 0.0
-                var xOffset: CGFloat = CGFloat(arc4random_uniform(40))
+                var xOffset: CGFloat = CGFloat(arc4random_uniform(10))
                 if(arc4random_uniform(2)%2 == 0){
                     xOffset = xOffset * -1
                 }
-                let yOffset: CGFloat = (CGFloat(arc4random_uniform(40)) * -1) - 40
+                let yOffset: CGFloat = (CGFloat(arc4random_uniform(10)) * -1)
                 let newLocation = CGPoint(x: clickView.frame.origin.x + xOffset, y: clickView.frame.origin.y + yOffset)
                 clickView.frame.origin = newLocation
             }, completion: { (complete) in
-//                UIView.animate(withDuration: 1.0, animations: {
-//                    clickView.alpha = 0.0
-//                    var xOffset: CGFloat = CGFloat(arc4random_uniform(40))
-//                    if(arc4random_uniform(2)%2 == 0){
-//                        xOffset = xOffset * -1
-//                    }
-//                    let yOffset: CGFloat = (CGFloat(arc4random_uniform(20)) * -1)
-//                    let newLocation = CGPoint(x: clickView.frame.origin.x + xOffset, y: clickView.frame.origin.y + yOffset)
-//                    clickView.frame.origin = newLocation
-//                }, completion: { (complete) in
-//                    clickView.removeFromSuperview()
-//                })
+                imageView.removeFromSuperview()
+                clickView.removeFromSuperview()
             })
+
         }
+        imageView.startAnimating()
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        if let touch = touches.first {
-            let location = touch.location(in: self)
-            print(location)
+    @objc func handleTap(_ gestureRecognizer: UITapGestureRecognizer) {
+        print("Hello World")
+        if gestureRecognizer.state == UIGestureRecognizerState.recognized {
+            showSmallHeart(rect: CGRect(x: gestureRecognizer.location(in: gestureRecognizer.view).x,y:  gestureRecognizer.location(in: gestureRecognizer.view).y, width: 60, height: 60))
         }
     }
     
@@ -251,6 +235,35 @@ class IDLikeView: UIView {
         imageView.animationRepeatCount = 1
         
         return imageView
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if let touch = touches.first {
+            let location = touch.location(in: self)
+            print(location)
+            showSmallHeart(rect: CGRect(x: location.x,y:  location.y, width: 60, height: 60))
+        }
+    }
+    
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        for touch in touches {
+//            let view = viewForTouch(touch: touch)
+//            // Move the view to the new location.
+//            let newLocation = touch.location(in: self)
+//            view?.center = newLocation
+        }
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        for touch in touches {
+//            removeViewForTouch(touch: touch)
+        }
+    }
+    
+    override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
+        for touch in touches {
+//            removeViewForTouch(touch: touch)
+        }
     }
     
 }
