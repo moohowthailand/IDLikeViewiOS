@@ -19,6 +19,7 @@
 		66C133FB2044101300A462E3 /* AnimationScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C133FA2044101300A462E3 /* AnimationScene.swift */; };
 		66C133FD2044170F00A462E3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66C133FC2044170F00A462E3 /* Images.xcassets */; };
 		66D75989203E80DF00A77B98 /* IDLikeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D75988203E80DF00A77B98 /* IDLikeView.swift */; };
+		66E481642050F7FE00FEE89C /* heartclick.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 66E481632050F7FE00FEE89C /* heartclick.mp3 */; };
 		B374F04D6D765C31A45EF452 /* Pods_IDLikeViewiOS_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDE7DC232662C2F621FEADB9 /* Pods_IDLikeViewiOS_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +52,7 @@
 		66C133FA2044101300A462E3 /* AnimationScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationScene.swift; sourceTree = "<group>"; };
 		66C133FC2044170F00A462E3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		66D75988203E80DF00A77B98 /* IDLikeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDLikeView.swift; sourceTree = "<group>"; };
+		66E481632050F7FE00FEE89C /* heartclick.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = heartclick.mp3; sourceTree = "<group>"; };
 		7111DDE0C2CE6C3592496A56 /* IDLikeViewiOS.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = IDLikeViewiOS.podspec; path = ../IDLikeViewiOS.podspec; sourceTree = "<group>"; };
 		764F89579D12D2E4A5F82FA8 /* Pods-IDLikeViewiOS_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IDLikeViewiOS_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IDLikeViewiOS_Example/Pods-IDLikeViewiOS_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		7EA635DAB2DE1E39FF947566 /* Pods-IDLikeViewiOS_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IDLikeViewiOS_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IDLikeViewiOS_Tests/Pods-IDLikeViewiOS_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 		665EE6992044187E00918FCE /* Sound */ = {
 			isa = PBXGroup;
 			children = (
+				66E481632050F7FE00FEE89C /* heartclick.mp3 */,
 				665EE69A2044189600918FCE /* heartsound.mp3 */,
 			);
 			name = Sound;
@@ -274,6 +277,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66E481642050F7FE00FEE89C /* heartclick.mp3 in Resources */,
 				665EE69B2044189600918FCE /* heartsound.mp3 in Resources */,
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				66C133FD2044170F00A462E3 /* Images.xcassets in Resources */,

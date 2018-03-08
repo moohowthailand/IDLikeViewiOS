@@ -17,6 +17,7 @@ class IDLikeView: UIView {
     var player: AVAudioPlayer?
     var scene: AnimationScene!
     var size: CGSize!
+    var isLongPressing: Bool! = false
     
     var imagesListArray: [UIImage]! = [UIImage]()
     var longImagesListArray: [UIImage]! = [UIImage]()
@@ -88,7 +89,7 @@ class IDLikeView: UIView {
         
         
         for imageName in 1...stillImageCount {
-            let heartName = "HeartClick" + "\(String(format: "%d", imageName))"
+            let heartName = "heartclick" + "\(String(format: "%d", imageName))"
             let heartImage:UIImage = UIImage(named: heartName)!
             imagesListArray.append(heartImage)
         }
@@ -140,26 +141,30 @@ class IDLikeView: UIView {
     @objc func imageHold(tapGestureRecognizer: UIPinchGestureRecognizer) {
         switch tapGestureRecognizer.state {
         case .began:
-            longImageView = UIImageView(frame: CGRect(x: 0,y: 0, width: self.frame.size.width, height: self.frame.size.height))
-            self.addSubview(initLongAnimate(imageView: longImageView))
-            longImageView.startAnimating()
-            
-            self.player?.currentTime = 0
-            self.player?.play()
+            if(isLongPressing == false){
+                isLongPressing = true
+                longImageView = UIImageView(frame: CGRect(x: 0,y: 0, width: self.frame.size.width, height: self.frame.size.height))
+                self.addSubview(initLongAnimate(imageView: longImageView))
+                longImageView.startAnimating()
+                
+                self.player?.currentTime = 0
+                self.player?.play()
+            }
             
         case .ended:
             self.player?.stop()
-            UIView.animate(withDuration: 1.0, animations: {
+            UIView.animate(withDuration: 0.5, animations: {
                 self.longImageView.alpha = 0.0
                 var xOffset: CGFloat = CGFloat(arc4random_uniform(40))
                 if(arc4random_uniform(2)%2 == 0){
                     xOffset = xOffset * -1
                 }
-                let yOffset: CGFloat = (CGFloat(arc4random_uniform(40)) * -1) - 60
+                let yOffset: CGFloat = (CGFloat(arc4random_uniform(40)) * -1) - 30
                 let newLocation = CGPoint(x: self.longImageView.frame.origin.x + xOffset, y: self.longImageView.frame.origin.y + yOffset)
                 self.longImageView.frame.origin = newLocation
             }, completion: { (complete) in
                 self.longImageView.removeFromSuperview()
+                self.isLongPressing = false
             })
             print("xxx")
         default: break
@@ -168,7 +173,7 @@ class IDLikeView: UIView {
     
     func showSmallHeart(rect:CGRect) {
         let clickView = UIView(frame: rect)
-        let imageView = UIImageView(frame: CGRect(x: -30,y: -70, width: 60, height: 60))
+        let imageView = UIImageView(frame: CGRect(x: -30,y: -30, width: 60, height: 60))
 //        imageView.backgroundColor = UIColor.gray
         clickView.addSubview(initAnimate(imageView: imageView))
         self.addSubview(clickView)
@@ -215,7 +220,7 @@ class IDLikeView: UIView {
         imageView.isHidden = false
         imageView.alpha = 1
         imageView.contentMode = .scaleAspectFit
-        let heartName = "HeartClick" + "\(String(format: "%d", 1))"
+        let heartName = "heartclick" + "\(String(format: "%d", 1))"
         let heartImage:UIImage = UIImage(named: heartName)!
         imageView.image = heartImage
         
