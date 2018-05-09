@@ -15,6 +15,8 @@ class IDLikeView: UIView {
 //    var touchViews = [UITouch:TouchSpotView]()
     
     var player: AVAudioPlayer?
+    var playerClick: AVAudioPlayer?
+    var playerClicks: [AVAudioPlayer] = []
     var scene: AnimationScene!
     var size: CGSize!
     var isLongPressing: Bool! = false
@@ -85,8 +87,16 @@ class IDLikeView: UIView {
         scrollView.contentSize = CGSize(width: (self.bounds.size.width * CGFloat(3)), height: bounds.height)
     }
     
+    func clearMemory(){
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+            self.playerClicks = []
+            self.clearMemory()
+        }
+    }
+    
     func setupView(numberOfPage: Int) {
         
+        clearMemory()
         
         for imageName in 1...stillImageCount {
             let heartName = "heartclick" + "\(String(format: "%d", imageName))"
@@ -99,7 +109,7 @@ class IDLikeView: UIView {
             longImagesListArray.append(heartImage)
         }
         
-        guard let url = Bundle.main.url(forResource: "heartsound", withExtension: "mp3") else { return }
+        guard let url = Bundle.main.url(forResource: "heartsound2", withExtension: "mp3") else { return }
         do {
             try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
             try AVAudioSession.sharedInstance().setActive(true)
@@ -107,6 +117,8 @@ class IDLikeView: UIView {
         } catch let error {
             print(error.localizedDescription)
         }
+        
+        
         
         subView.frame = self.bounds
         
@@ -172,24 +184,11 @@ class IDLikeView: UIView {
     }
     
     func showSmallHeart(rect:CGRect) {
+        
         let clickView = UIView(frame: rect)
         let imageView = UIImageView(frame: CGRect(x: -30,y: -30, width: 60, height: 60))
-//        imageView.backgroundColor = UIColor.gray
         clickView.addSubview(initAnimate(imageView: imageView))
         self.addSubview(clickView)
-//        UIView.animate(withDuration: 2.0, animations: {
-//            clickView.alpha = 0.0
-//            var xOffset: CGFloat = CGFloat(arc4random_uniform(40))
-//            if(arc4random_uniform(2)%2 == 0){
-//                xOffset = xOffset * -1
-//            }
-//            let yOffset: CGFloat = (CGFloat(arc4random_uniform(40)) * -1) - 40
-//            let newLocation = CGPoint(x: clickView.frame.origin.x + xOffset, y: clickView.frame.origin.y + yOffset)
-//            clickView.frame.origin = newLocation
-//        }, completion: { (complete) in
-//            imageView.removeFromSuperview()
-//            clickView.removeFromSuperview()
-//        })
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) { // change 2 to desired number of seconds
             UIView.animate(withDuration: 0.5, animations: {
                 clickView.alpha = 0.0
@@ -207,6 +206,20 @@ class IDLikeView: UIView {
 
         }
         imageView.startAnimating()
+        guard let url2 = Bundle.main.url(forResource: "heartclick4", withExtension: "mp3") else { return }
+        do {
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+            try AVAudioSession.sharedInstance().setActive(true)
+            let playerClick = try AVAudioPlayer(contentsOf: url2, fileTypeHint: AVFileType.mp3.rawValue)
+            playerClicks.append(playerClick)
+            playerClicks.last?.prepareToPlay()
+            playerClicks.last?.currentTime = 0
+            playerClicks.last?.volume = 0.5
+            playerClicks.last?.play()
+        } catch let error {
+            print(error.localizedDescription)
+        }
+        
     }
     
     @objc func handleTap(_ gestureRecognizer: UITapGestureRecognizer) {
@@ -246,7 +259,7 @@ class IDLikeView: UIView {
         if let touch = touches.first {
             let location = touch.location(in: self)
             print(location)
-            showSmallHeart(rect: CGRect(x: location.x,y:  location.y, width: 60, height: 60))
+//            showSmallHeart(rect: CGRect(x: location.x,y:  location.y, width: 60, height: 60))
         }
     }
     

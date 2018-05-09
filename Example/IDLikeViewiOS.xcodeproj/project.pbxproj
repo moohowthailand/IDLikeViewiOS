@@ -14,12 +14,17 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		660250DC2057A8310012DB09 /* heartclick3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 660250DB2057A8310012DB09 /* heartclick3.mp3 */; };
+		660250DE2057AA2D0012DB09 /* heartclick4.mov in Resources */ = {isa = PBXBuildFile; fileRef = 660250DD2057AA2D0012DB09 /* heartclick4.mov */; };
+		660250E02057ABC60012DB09 /* heartclick4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 660250DF2057ABC60012DB09 /* heartclick4.mp3 */; };
 		665EE69B2044189600918FCE /* heartsound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 665EE69A2044189600918FCE /* heartsound.mp3 */; };
 		66C133F920440F8A00A462E3 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66C133F820440F8A00A462E3 /* GameKit.framework */; };
 		66C133FB2044101300A462E3 /* AnimationScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C133FA2044101300A462E3 /* AnimationScene.swift */; };
 		66C133FD2044170F00A462E3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66C133FC2044170F00A462E3 /* Images.xcassets */; };
 		66D75989203E80DF00A77B98 /* IDLikeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D75988203E80DF00A77B98 /* IDLikeView.swift */; };
 		66E481642050F7FE00FEE89C /* heartclick.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 66E481632050F7FE00FEE89C /* heartclick.mp3 */; };
+		66F8FB852056556600FBF884 /* heartclick2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 66F8FB832056556600FBF884 /* heartclick2.mp3 */; };
+		66F8FB862056556600FBF884 /* heartsound2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 66F8FB842056556600FBF884 /* heartsound2.mp3 */; };
 		B374F04D6D765C31A45EF452 /* Pods_IDLikeViewiOS_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDE7DC232662C2F621FEADB9 /* Pods_IDLikeViewiOS_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,12 +52,17 @@
 		607FACE51AFB9204008FA782 /* IDLikeViewiOS_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IDLikeViewiOS_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		660250DB2057A8310012DB09 /* heartclick3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = heartclick3.mp3; sourceTree = "<group>"; };
+		660250DD2057AA2D0012DB09 /* heartclick4.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = heartclick4.mov; sourceTree = "<group>"; };
+		660250DF2057ABC60012DB09 /* heartclick4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = heartclick4.mp3; sourceTree = "<group>"; };
 		665EE69A2044189600918FCE /* heartsound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = heartsound.mp3; sourceTree = "<group>"; };
 		66C133F820440F8A00A462E3 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		66C133FA2044101300A462E3 /* AnimationScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationScene.swift; sourceTree = "<group>"; };
 		66C133FC2044170F00A462E3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		66D75988203E80DF00A77B98 /* IDLikeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDLikeView.swift; sourceTree = "<group>"; };
 		66E481632050F7FE00FEE89C /* heartclick.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = heartclick.mp3; sourceTree = "<group>"; };
+		66F8FB832056556600FBF884 /* heartclick2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = heartclick2.mp3; sourceTree = "<group>"; };
+		66F8FB842056556600FBF884 /* heartsound2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = heartsound2.mp3; sourceTree = "<group>"; };
 		7111DDE0C2CE6C3592496A56 /* IDLikeViewiOS.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = IDLikeViewiOS.podspec; path = ../IDLikeViewiOS.podspec; sourceTree = "<group>"; };
 		764F89579D12D2E4A5F82FA8 /* Pods-IDLikeViewiOS_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IDLikeViewiOS_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IDLikeViewiOS_Example/Pods-IDLikeViewiOS_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		7EA635DAB2DE1E39FF947566 /* Pods-IDLikeViewiOS_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IDLikeViewiOS_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IDLikeViewiOS_Tests/Pods-IDLikeViewiOS_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -159,6 +169,11 @@
 		665EE6992044187E00918FCE /* Sound */ = {
 			isa = PBXGroup;
 			children = (
+				660250DF2057ABC60012DB09 /* heartclick4.mp3 */,
+				660250DD2057AA2D0012DB09 /* heartclick4.mov */,
+				660250DB2057A8310012DB09 /* heartclick3.mp3 */,
+				66F8FB832056556600FBF884 /* heartclick2.mp3 */,
+				66F8FB842056556600FBF884 /* heartsound2.mp3 */,
 				66E481632050F7FE00FEE89C /* heartclick.mp3 */,
 				665EE69A2044189600918FCE /* heartsound.mp3 */,
 			);
@@ -278,8 +293,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				66E481642050F7FE00FEE89C /* heartclick.mp3 in Resources */,
+				660250DE2057AA2D0012DB09 /* heartclick4.mov in Resources */,
+				66F8FB852056556600FBF884 /* heartclick2.mp3 in Resources */,
+				660250E02057ABC60012DB09 /* heartclick4.mp3 in Resources */,
 				665EE69B2044189600918FCE /* heartsound.mp3 in Resources */,
+				660250DC2057A8310012DB09 /* heartclick3.mp3 in Resources */,
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
+				66F8FB862056556600FBF884 /* heartsound2.mp3 in Resources */,
 				66C133FD2044170F00A462E3 /* Images.xcassets in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
